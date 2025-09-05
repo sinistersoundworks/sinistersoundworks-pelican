@@ -91,29 +91,16 @@
       <h2 class="section-heading text-uppercase">{{ CONTACT_TITLE }}</h2>
       <h3 class="section-subheading text-muted">{{ CONTACT_TEXT }}</h3>
     </div>
-    <form id="contactForm" action="https://formspree.io/{{ FORMSPREE_FORM_PATH }}" method="POST">
-      <div class="row align-items-stretch mb-5">
-        <div class="col-md-6">
-          <div class="form-group">
-            <input class="form-control" id="name" name="name" type="text" placeholder="Your Name *" required />
-          </div>
-          <div class="form-group">
-            <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" required />
-          </div>
-          <div class="form-group mb-md-0">
-            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Your Phone *" required />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group form-group-textarea mb-md-0">
-            <textarea class="form-control" id="message" name="message" placeholder="Your Message *" required></textarea>
-          </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <div class="contact-email">
+          <h4 class="mb-4">Get in touch:</h4>
+          <a href="mailto:hello@sinistersoundworks.com" class="btn btn-primary btn-xl">
+            hello@sinistersoundworks.com
+          </a>
         </div>
       </div>
-      <div class="text-center">
-        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
-      </div>
-    </form>
+    </div>
   </div>
 </section>
 
