@@ -144,7 +144,7 @@ ABOUT_TITLE = 'About Me'
 ABOUT_IMAGE = 'assets/img/about.png'
 ABOUT_TEXT = '''Hello, I'm Georgi, a freelance audio engineer and full stack producer based in Prague, Czech Republic. I specialize in heavy-hitting genres like metal, hardcore, punk, and all things heavy rock, but I'm always eager to explore new music genres.
 
-If you're looking for a creative partner to help you craft your next musical masterpiece, look no further. Fill out the form below and let's work together.'''
+If you're looking for a creative partner to help you craft your next musical masterpiece, look no further. Get in touch and let's work together.'''
 
 # Contact section
 CONTACT_TITLE = 'Contact'
