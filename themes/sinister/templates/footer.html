@@ -1,0 +1,24 @@
+<!-- Footer -->
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 text-lg-start">Copyright &copy; {{ SITENAME }} 2024</div>
+      <div class="col-lg-4 my-3 my-lg-0">
+        {% for name, link in SOCIAL %}
+        <a class="btn btn-dark btn-social mx-2" href="{{ link }}" aria-label="{{ name }}">
+          {% if name == 'Facebook' %}
+          <i class="lni lni-facebook-filled"></i>
+          {% elif name == 'Instagram' %}
+          <i class="lni lni-instagram-filled"></i>
+          {% elif name == 'Muso.ai' %}
+          <i class="lni lni-music"></i>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="link-dark text-decoration-none me-3" href="/privacy-policy/">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>

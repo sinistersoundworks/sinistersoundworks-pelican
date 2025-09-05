@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Header -->
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">
+        <img height="250" src="/{{ MASCOT_IMAGE }}" alt="{{ SITENAME }}" />
+      </div>
+      <div class="intro-heading text-uppercase">
+        {{ HEADER_TEXT }}
+      </div>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ HEADER_BUTTONLINK }}">{{ HEADER_BUTTON }}</a>
+    </div>
+  </div>
+</header>
+
+<!-- Services -->
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Services</h2>
+    </div>
+    <div class="row text-center">
+      {% for service in SERVICES %}
+      <div class="col-md-4">
+        <span class="service-icon">
+          <i class="{{ service.icon }}" style="font-size: 4rem; color: #fed136;"></i>
+        </span>
+        <h4 class="my-3">{{ service.title }}</h4>
+        <div class="text-muted">{{ service.description|markdown }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="page-section bg-light" id="portfolio">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Portfolio</h2>
+      <h3 class="section-subheading text-muted">Check out some of my recent work.</h3>
+    </div>
+    <div class="row">
+      {% for article in articles %}
+      {% if article.category == 'Portfolio' %}
+      <div class="col-md-4 col-sm-6 portfolio-item">
+        <img class="img-fluid" src="/{{ article.thumbnail }}" alt="{{ article.title }}" />
+        <div class="portfolio-caption">
+          {% if article.audio %}
+          <audio class="plyr-audio" controls>
+            <source src="{{ article.audio|replace('www.dropbox.com', 'dl.dropboxusercontent.com') }}" type="audio/mpeg" />
+          </audio>
+          {% endif %}
+          <h4>{{ article.caption_title }}</h4>
+          <p class="text-muted">{{ article.caption_subtitle }}</p>
+          <p>{{ article.tags }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="page-section" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">{{ ABOUT_TITLE }}</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="text-muted">{{ ABOUT_TEXT|markdown }}</div>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid" src="/{{ ABOUT_IMAGE }}" alt="About" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="page-section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">{{ CONTACT_TITLE }}</h2>
+      <h3 class="section-subheading text-muted">{{ CONTACT_TEXT }}</h3>
+    </div>
+    <form id="contactForm" action="https://formspree.io/{{ FORMSPREE_FORM_PATH }}" method="POST">
+      <div class="row align-items-stretch mb-5">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input class="form-control" id="name" name="name" type="text" placeholder="Your Name *" required />
+          </div>
+          <div class="form-group">
+            <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" required />
+          </div>
+          <div class="form-group mb-md-0">
+            <input class="form-control" id="phone" name="phone" type="tel" placeholder="Your Phone *" required />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group form-group-textarea mb-md-0">
+            <textarea class="form-control" id="message" name="message" placeholder="Your Message *" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Portfolio Modals -->
+{% for article in articles %}
+{% if article.category == 'Portfolio' %}
+<div class="portfolio-modal modal fade" id="portfolioModal{{ loop.index }}" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="close-modal" data-bs-dismiss="modal"><img src="/assets/img/close-icon.svg" alt="Close modal" /></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="modal-body">
+              <h2 class="text-uppercase">{{ article.caption_title }}</h2>
+              <p class="item-intro text-muted">{{ article.caption_subtitle }}</p>
+              {% if article.audio %}
+              <audio controls class="plyr-audio">
+                <source src="{{ article.audio }}" type="audio/mpeg">
+              </audio>
+              {% endif %}
+              <img class="img-fluid d-block mx-auto" src="/{{ article.thumbnail }}" alt="{{ article.title }}" />
+              <div class="text-muted">{{ article.content }}</div>
+              {% if article.tags %}
+              <ul class="list-inline">
+                <li><strong>Tags:</strong> {{ article.tags }}</li>
+              </ul>
+              {% endif %}
+              <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                <i class="lni lni-close me-1"></i>
+                Close Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}
