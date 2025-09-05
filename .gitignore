@@ -54,3 +54,4 @@ node_modules/
 # Build artifacts
 dist/
 build/
+__pycache__/pelicanconf.cpython-314.pyc
