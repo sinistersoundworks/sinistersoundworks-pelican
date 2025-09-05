@@ -56,7 +56,7 @@
           {% endif %}
           <h4>{{ article.caption_title }}</h4>
           <p class="text-muted">{{ article.caption_subtitle }}</p>
-          <p>{{ article.tags }}</p>
+          <p>{{ article.tags|join(', ') }}</p>
         </div>
       </div>
       {% endif %}
