@@ -359,6 +359,26 @@ ul.social-buttons li a:hover {
   display: inline !important;
 }
 
+/* Light theme hero image adjustment */
+[data-theme="light"] header.masthead {
+  position: relative;
+}
+
+[data-theme="light"] header.masthead::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  filter: brightness(1.5);
+  z-index: -1;
+}
+
 /* Responsive theme toggle */
 @media (max-width: 768px) {
   .theme-toggle {
