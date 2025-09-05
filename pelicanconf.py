@@ -61,9 +61,10 @@ DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 
 # Static paths - copy entire assets directory and CNAME
-STATIC_PATHS = ['assets', 'CNAME']
+STATIC_PATHS = ['assets', 'extra/robots.txt', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
-    'CNAME': {'path': 'CNAME'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/CNAME': {'path': 'CNAME'},
 }
 
 # Article settings
