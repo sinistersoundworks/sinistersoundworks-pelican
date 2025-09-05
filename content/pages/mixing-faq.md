@@ -1,64 +1,89 @@
 Title: Mixing FAQ
 Slug: mixing-faq
 
-<!-- faq -->
-<section class="page-section" id="faq">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">Mixing Preparation Guide</h2>
-        <h3 class="section-subheading text-muted">Thank you for choosing me to mix your music! To ensure the best results and a smooth workflow, please follow these guidelines when preparing and exporting your files.</h3>
-      </div>
-    </div>
-    
-    <div class="row text-center">
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="fas fa-microphone fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="service-heading">Recording</h4>
-        <div class="text-muted">A good mix begins with a good recording.<br>
-I take every step to help you get it right from the very start.<br><br>
+# Mixing Preparation Guide
 
-I work with various studios, depending on the project requirements and budget.<br><br>
+Thank you for choosing me to mix your music! To ensure the best results and a smooth workflow, please follow these guidelines when preparing and exporting your files.
 
-Mobile recording on location and remote recording available as well.</div>
-      </div>
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="fa-solid fa-headphones-simple fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="service-heading">Mixing</h4>
-        <div class="text-muted">Whether you are after a crystal-clear sound or a dirty old-school vibe, I can take your recording from rough demo to release-ready mixes.<br>
-My aim is to help you achieve your vision of your music, while making sure it sounds spot on.<br><br>
+## 1. General Guidelines
 
-If you'd prefer to master the song elsewhere, I will provide you with an unmastered version as well.<br><br>
+**Check for Clipping:** Make sure none of your tracks peak above -3dBFS. Keep headroom to allow for proper mixing.
 
-I can also provide stems at additional cost.</div>
-      </div>
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-          <i class="fas fa-circle fa-stack-2x text-primary"></i>
-          <i class="fa-solid fa-record-vinyl fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="service-heading">Mastering</h4>
-        <div class="text-muted">Mastering for a single song or an album/EP.<br><br>
+**Consolidate Audio Tracks:** Each track should start at the same time (bar 1, beat 1), even if there is silence at the beginning.
 
-Master for CD and streaming (44.1 kHz/16 bit)<br><br>
+**Remove Unnecessary Processing:** Unless it is a key part of the sound, disable all EQ, compression, reverb, and effects.
 
-High definition master (48 kHz/24 bit)<br><br>
+**Label Files Clearly:** Use descriptive names (e.g., "Vox_Lead.wav", "Kick_in.wav", "Bass_DI.wav", "Guitar_Rtm_L", "Guitar_Rtm_R" etc.).
 
-2 free revisions<br><br>
+**Provide Tempo & Key Info:** Include the BPM and key signature.
 
-Master for Vinyl<br><br>
+**Reference Mix:** Send a rough mix if available.
 
-DDP Master (Albums/EPs only) included in the price.<br><br>
+**MIDI File with Tempo & Markers:** Export a MIDI file containing the tempo map and any session markers (such as section labels, tempo changes, and time signature changes).
 
-Additional formats (radio edit, instrumentals etc.) available at extra cost.</div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End faq -->
+## 2. File Formats
+
+### Audio Stems
+
+**Format:** WAV or AIFF (24-bit or 32-bit float, 44.1kHz or 48kHz). Higher sample rates are accepted but I would normally downsample them to 48kHz before I start mixing.
+
+**Alignment:** All files should start from the same point in the session.
+
+**Separation:** Export each instrument and vocal track individually.
+
+### Edits
+
+Make sure all edits (crossfades etc.) and auto tuning are consolidated in the wav files.
+
+### Vocal Tracks
+
+- Separate lead vocals, harmonies, doubles, and ad-libs.
+- Provide dry versions (without reverb, delay, or heavy compression).
+- Optionally, include a processed version if you want me to hear your vision.
+
+### Bass
+
+I prefer a DI signal from the bass here, as well as MIDI and Amps or DIRECT signal you might have recorded. Any combinations of these are welcome. I can generate a realistic sounding bass from MIDI only, if that's all you have.
+
+### Guitars
+
+- If possible, include both amplified tracks (wet) and DI tracks (dry) for re-amping options.
+
+### Drums
+
+- Provide individual stems: Kick, Snare (Top/Bottom), Hi-Hat, Toms, Overheads, and Room.
+- If using programmed drums, include MIDI files for flexibility.
+
+### Drum Midi Labeling
+
+If you are giving me drums in MIDI format, please make a separate midi track for each articulation (kick, snare, tom, cymbal hit, cymbal choke, hi hat open, hi hat closed) and label it as such. This way, it will not matter what midi note is used and I can re-arrange your drums to best suit my workflow.
+
+### Synths & MIDI
+
+- If you used virtual instruments, include both rendered audio tracks and MIDI files in case adjustments are needed.
+
+### MIDI File with Tempo & Markers (Required)
+
+Export a MIDI file (.mid) containing the tempo map and markers: Create a blank MIDI track in your song and then export a MIDI file including tempo markers from within your DAW.
+
+This is very important as it ensures that I have the correct tempo changes, time signature changes, and any labeled sections.
+
+## 3. Additional Files
+
+**Reference Tracks:** If you have a specific sound in mind, send professionally mixed songs that match your desired style.
+
+**Session Notes:** If there are specific mix requests (e.g., effects, vocal treatment), let me know in a separate text file or email.
+
+## 4. How to Send Your Files
+
+**Organize into a Folder:** Name it "[ArtistName_SongTitle_BPM_AudioBitrate_SampleRate_Version]". (e.g.: "TenaciousD_Tribute_120_24_48_v1")
+
+**Zip the Folder:** Compress it into a .zip file.
+
+**Upload via a Cloud Service:** Use WeTransfer, Google Drive, Dropbox or another service.
+
+**Send a Download Link:** Email or message me with the link. Please make sure the link is accessible (e.g make it public).
+
+## 5. Contact
+
+If you have any questions about file preparation, feel free to reach out before sending your files. I'm happy to help! 🙂
