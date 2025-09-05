@@ -6,6 +6,14 @@
   --primary-hover: #e6bc2f;
 }
 
+/* Smooth Scrolling - Cross-browser compatibility */
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+}
+
 /* Primary buttons */
 .btn-primary {
   background-color: var(--primary-color) !important;
