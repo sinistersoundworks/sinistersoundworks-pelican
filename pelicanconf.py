@@ -73,6 +73,11 @@ ARTICLE_SAVE_AS = 'portfolio/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
+# Sort articles by filename number prefix (descending)
+DEFAULT_PAGINATION = False
+ARTICLE_ORDER_BY = 'basename'
+REVERSE_ARTICLE_ORDER = True
+
 # Custom variables for site content
 SITE_DESCRIPTION = 'Recording | Mixing | Mastering'
 HEADER_TITLE = "Hardcore & Metal Recordings that bite"
