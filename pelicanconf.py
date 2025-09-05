@@ -75,7 +75,14 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 # Sort articles by filename number prefix (descending)
 DEFAULT_PAGINATION = False
-ARTICLE_ORDER_BY = 'basename'
+
+def article_sort_key(article):
+    # Extract number from filename (e.g., "01-title" -> 1)
+    import re
+    match = re.match(r'(\d+)', article.source_path.split('/')[-1])
+    return int(match.group(1)) if match else 0
+
+ARTICLE_ORDER_BY = article_sort_key
 REVERSE_ARTICLE_ORDER = True
 
 # Custom variables for site content

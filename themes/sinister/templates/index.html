@@ -44,7 +44,7 @@
       <h3 class="section-subheading text-muted">Check out some of my recent work.</h3>
     </div>
     <div class="row">
-      {% for article in articles %}
+      {% for article in articles|sort(attribute='source_path', reverse=True) %}
       {% if article.category == 'Portfolio' %}
       <div class="col-md-4 col-sm-6 portfolio-item">
         <img class="img-fluid" src="/{{ article.thumbnail }}" alt="{{ article.title }}" />
