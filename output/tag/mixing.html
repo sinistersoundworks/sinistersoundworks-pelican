@@ -33,6 +33,77 @@ SINISTER SOUNDWORKS - mixing tag  </title>
   
   <!-- LineIcons -->
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+  
+  <!-- Custom color overrides -->
+  <style>
+    :root {
+      --primary-color: #fed136;
+      --primary-hover: #e6bc2f;
+    }
+    
+    /* Primary buttons */
+    .btn-primary {
+      background-color: var(--primary-color) !important;
+      border-color: var(--primary-color) !important;
+      color: #212529 !important;
+    }
+    
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+      background-color: var(--primary-hover) !important;
+      border-color: var(--primary-hover) !important;
+      color: #212529 !important;
+    }
+    
+    /* Navigation links */
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: var(--primary-color) !important;
+    }
+    
+    /* Section headings and text-primary */
+    .text-primary {
+      color: var(--primary-color) !important;
+    }
+    
+    /* Links */
+    a {
+      color: var(--primary-color);
+    }
+    
+    a:hover {
+      color: var(--primary-hover);
+    }
+    
+    /* Footer links */
+    .link-dark:hover {
+      color: var(--primary-color) !important;
+    }
+    
+    /* Social buttons */
+    .btn-social:hover {
+      background-color: var(--primary-color) !important;
+      border-color: var(--primary-color) !important;
+      color: #212529 !important;
+    }
+    
+    /* Contact form focus states */
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.2rem rgba(254, 209, 54, 0.25);
+    }
+    
+    /* Plyr primary color override */
+    .plyr--audio .plyr__control.plyr__tab-focus,
+    .plyr--audio .plyr__control:hover,
+    .plyr--audio .plyr__control[aria-expanded=true] {
+      background: var(--primary-color) !important;
+      color: #212529 !important;
+    }
+    
+    .plyr__progress input[type=range] {
+      color: var(--primary-color);
+    }
+  </style>
 
 </head>
 
