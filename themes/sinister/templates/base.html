@@ -51,6 +51,11 @@
 </head>
 
 <body id="page-top">
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle between light and dark theme" title="Toggle theme">
+    <i class="lni lni-sun" id="themeIcon"></i>
+  </button>
+
   {% include 'navbar.html' %}
   
   {% block content %}
@@ -122,6 +127,90 @@
     // Set current year in footer
     document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Theme Toggle Functionality
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const body = document.body;
+      const logoDark = document.getElementById('logo-dark');
+      const logoLight = document.getElementById('logo-light');
+      
+      // Check for saved theme preference or detect system preference
+      const savedTheme = localStorage.getItem('theme');
+      let currentTheme;
+      
+      if (savedTheme) {
+        currentTheme = savedTheme;
+      } else {
+        // Detect system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        currentTheme = prefersDark ? 'dark' : 'light';
+      }
+      
+      // Apply theme
+      if (currentTheme === 'light') {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.className = 'lni lni-moon';
+        if (logoDark && logoLight) {
+          logoDark.style.display = 'none';
+          logoLight.style.display = 'inline';
+        }
+      } else {
+        body.removeAttribute('data-theme');
+        themeIcon.className = 'lni lni-sun';
+        if (logoDark && logoLight) {
+          logoDark.style.display = 'inline';
+          logoLight.style.display = 'none';
+        }
+      }
+      
+      // Listen for system theme changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+          if (e.matches) {
+            // System switched to dark
+            body.removeAttribute('data-theme');
+            themeIcon.className = 'lni lni-sun';
+            if (logoDark && logoLight) {
+              logoDark.style.display = 'inline';
+              logoLight.style.display = 'none';
+            }
+          } else {
+            // System switched to light
+            body.setAttribute('data-theme', 'light');
+            themeIcon.className = 'lni lni-moon';
+            if (logoDark && logoLight) {
+              logoDark.style.display = 'none';
+              logoLight.style.display = 'inline';
+            }
+          }
+        }
+      });
+      
+      // Theme toggle event listener
+      themeToggle.addEventListener('click', function() {
+        const currentTheme = body.getAttribute('data-theme');
+        
+        if (currentTheme === 'light') {
+          // Switch to dark theme
+          body.removeAttribute('data-theme');
+          themeIcon.className = 'lni lni-sun';
+          localStorage.setItem('theme', 'dark');
+          if (logoDark && logoLight) {
+            logoDark.style.display = 'inline';
+            logoLight.style.display = 'none';
+          }
+        } else {
+          // Switch to light theme
+          body.setAttribute('data-theme', 'light');
+          themeIcon.className = 'lni lni-moon';
+          localStorage.setItem('theme', 'light');
+          if (logoDark && logoLight) {
+            logoDark.style.display = 'none';
+            logoLight.style.display = 'inline';
+          }
+        }
+      });
       
       // Smooth scrolling for navigation links - Enhanced for Brave browser
       document.querySelectorAll('a.js-scroll-trigger').forEach(function(link) {
