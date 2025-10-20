@@ -1,19 +1,23 @@
 Title: Privacy Policy
 Slug: privacy-policy
 
-<div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Privacy Policy</h2>
-</div>
+<!-- <div class="col-lg-12 text-center"> -->
+<!-- 	<h2 class="section-heading text-uppercase">Privacy Policy</h2> -->
+<!-- </div> -->
 
 This Privacy Policy describes how your personal information is collected, used, and shared when you visit SINISTER SOUNDWORKS (the "Site").
 
-**PERSONAL INFORMATION WE COLLECT**
+**We do not collect any personal information.**
+
+**INFORMATION WE COLLECT**
 
 Automatically Collected (Analytics):
 
-When you visit the Site, we automatically receive information about your device from your browser, such as your IP address. As you browse the Site, we also collect information about how you interact with the Site. We refer to this automatically-collected information as "Device Information".
+When you visit the Site, we automatically receive information about your device from your browser, such as your country, browser, OS and device type (e.g Desktop, Mobile). As you browse the Site, we also collect information about how you interact with the Site.
 
-We collect Device Information using cookies. "Cookies" are data files that are placed on your device. For more information about cookies and how to disable them, visit http://www.allaboutcookies.org.
+We DO NOT store cookies on your device and we DO NOT collect IP addresses or any other personal information. 
+
+For more information about our analytics stack please read [https://plausible.io/data-policy](https://plausible.io/data-policy)
 
 **CHANGES**
 
